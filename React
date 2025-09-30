@@ -1,0 +1,20 @@
+import React, { useState } from "react";
+
+function App() {
+  const [city, setCity] = useState(""); // user ka input store karega
+
+  return (
+    <div>
+      <h1>Weather App</h1>
+      <input
+        type="text"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+        placeholder="Enter city"
+      />
+      <button onClick={() => alert(city)}>Get Weather</button>
+    </div>
+  );
+}
+
+export default App;
